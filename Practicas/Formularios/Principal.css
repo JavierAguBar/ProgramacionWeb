@@ -1,0 +1,13 @@
+input, textarea{
+	padding: 5px;
+	columns: #fff;
+}
+::placeholder{
+	background: darkblue;
+}
+:is(input, textarea): invalid {
+	background: darkred;
+}
+:is(input, textarea): valid {
+	background: green;
+}
