@@ -8,6 +8,7 @@ input, textarea{
 :is(input, textarea): invalid {
 	background: darkred;
 }
-:is(input, textarea): valid {
+input, textarea{
 	background: green;
+	
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src= "biblioteca.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Uso de clases en JavaScript</title>
+</head>
+<body>
+	<h1>Clases en JavaScript</h1>
+	<div id= "divPoo"></div>
+	<script>
+		const mario = new Personaje("Mario");
+
+		const divRes = document.querySelectorAll("div")[0];
+
+		if (divRes){
+			divRes.innerHTML = "Hola " + mario.hola();
+			divRes.innerHTML += "<br>cadena JSON: " + JSON.stringify(mario);
+
+
+			divRes.innerHTML += "br/hijos del body: " + document.body.childNodes;
+			
+		}
+
+	</script>
+	<script src = "juego.js"></script>
+</body>
+</html>
