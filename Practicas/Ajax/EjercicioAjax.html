@@ -26,6 +26,16 @@
 				if(peticion_http.readyState == 4){
 					if(peticion_http.status == 200){
 						alert(peticion_http.responseText);
+
+						//let XML = new XMLSerializer();
+						let arrayClientes = peticion_http.responseXML.geElementID("clientes")[0];
+						let divContenido = document.geElementID("contenedor");
+						if(divContenido){
+							let nombre = arrayClientes[0].geElementID("nombre");
+							let sector = arrayClientes[0].geElementID("sector");
+							let notas = arrayClientes[0].geElementID("notas");
+
+						}
 					}
 				}
 			}
