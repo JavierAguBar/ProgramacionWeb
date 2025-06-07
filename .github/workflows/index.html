@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tareas del curso de Javier Aguilar Barrera</title>
+  <style>
+    body{
+      font-family: system-ui, sans-serif;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      gap:1rem;
+      background:#f5f7fa;
+    }
+    select{
+      padding:0.5rem 1rem;
+      font-size:1rem;
+      border:1px solid #ccc;
+      border-radius:0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tareas del curso de Javier Aguilar Barrera</h1>
+
+  <label for="taskSelect">Ir a la carpeta:</label>
+  <select id="taskSelect">
+    <option value="" selected disabled>Selecciona una carpeta…</option>
+    <option value="Clases/">    Clases</option>
+    <option value="Html5_semantic_tags/">  HTLM tags</option>
+    <option value="Practicas/">      Practicas</option>
+    <option value="ProcesosXML/">  Procesos XML</option>
+    <option value="PRESTAPACHE/">    Proyecto</option>
+
+  </select>
+
+  <script>
+    const sel = document.getElementById('taskSelect');
+    sel.addEventListener('change', () => {
+      const folder = sel.value.trim();
+      if (folder) {
+        window.location.href = folder;
+      }
+    });
+  </script>
+</body>
+</html>
